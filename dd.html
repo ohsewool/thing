@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,35 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background: rgb(255, 234, 200);
-            background: linear-gradient(to right, rgb(255, 234, 200), white);
+            background: rgb(255, 234, 200) radial-gradient(circle, transparent 1%, rgb(255, 234, 200) 1%) center/150%;
             color: #333;
+            animation: gradient 5s infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 100%;
+            }
         }
 
         header {
-            background-color: #2c3e50;
+            background-color: #faa05a;
             color: white;
             text-align: center;
             padding: 1em 0;
         }
 
         nav {
-            background-color: #34495e;
+            background-color: white;
             padding: 1em 0;
             text-align: center;
         }
 
         nav a {
-            color: white;
+            color: #333;
             text-decoration: none;
             padding: 0 1em;
             font-weight: bold;
@@ -37,7 +47,7 @@
         }
 
         nav a:hover {
-            color: #e74c3c;
+            color: #e44d26;
         }
 
         .utility-links {
@@ -57,10 +67,23 @@
 
         section {
             padding: 2em;
+            background-color: rgb(255, 234, 200); /* 섹션 배경색 변경 */
+            text-align: center;
+        }
+
+        #home, #owl-info, #curriculum, #community {
+            background-color: rgb(255, 234, 200);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px; /* 이미지와 텍스트 간격 조절을 위해 추가 */
         }
 
         footer {
-            background-color: #2c3e50;
+            background-color: #faa05a;
             color: white;
             text-align: center;
             padding: 1em 0;
@@ -71,6 +94,7 @@
     </style>
     <title>반려견 교육 웹페이지</title>
 </head>
+
 <body>
 
     <header>
@@ -96,16 +120,30 @@
     <section id="home">
         <h2>홈</h2>
         <p>반려견 교육 홈 페이지에 오신 것을 환영합니다.</p>
+        <img src="home-image.jpg" alt="홈 이미지">
     </section>
 
-    <section id="about-us">
-        <h2>우리에 대해</h2>
+    <section id="owl-info">
+        <h2>오울이란</h2>
         <p>
-            '내 반려견은 왜 이런 행동을 할까?'<br>
+            '내 반려견은 왜 이런 행동을 할까?'
             반려견의 문제 행동은 하루 아침에 생긴 것이 아닙니다.
             그들은 꾸준한 신호로 우리에게 말을 걸었을 것입니다.
             반려견이 보내는 신호를 읽고 그들의 마을을 이해하여 함께 행복하게 살 수 있도록 하는 것이 오울교육의 목표입니다.
         </p>
+        <img src="owl-info-image.jpg" alt="오울이란 이미지">
+    </section>
+
+    <section id="curriculum">
+        <h2>커리큘럼</h2>
+        <p>반려견 교육에 적용되는 커리큘럼입니다.</p>
+        <img src="curriculum-image.jpg" alt="커리큘럼 이미지">
+    </section>
+
+    <section id="community">
+        <h2>커뮤니티</h2>
+        <p>반려견 교육에 관한 소식과 정보를 공유하는 커뮤니티입니다.</p>
+        <img src="community-image.jpg" alt="커뮤니티 이미지">
     </section>
 
     <!-- 나머지 섹션들 추가 -->
@@ -115,4 +153,5 @@
     </footer>
 
 </body>
+
 </html>
