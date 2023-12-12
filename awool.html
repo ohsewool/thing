@@ -4,31 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+                .image-overlay {
+            position: relative;
+        }
+
+        .overlay-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* 이미지 크기나 다른 스타일을 조절할 수 있습니다. */
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             background: rgb(255, 234, 200);
-            background: linear-gradient(to right, rgb(255, 234, 200), white);
             color: #333;
         }
-
+        
+        section {
+            text-align: left;
+            padding: 2em;
+        }
         header {
-            background-color: #2c3e50;
+            background-color: rgb(254, 107, 30);
             color: white;
             text-align: center;
             padding: 1em 0;
         }
 
         nav {
-            background-color: #34495e;
+            background-color: rgb(255, 255, 255);
             padding: 1em 0;
             text-align: center;
+            margin: 0; /* 추가 */
         }
 
         nav a {
-            color: white;
+            color: black;
             text-decoration: none;
             padding: 0 1em;
             font-weight: bold;
@@ -37,7 +52,7 @@
         }
 
         nav a:hover {
-            color: #e74c3c;
+            color: #866826;
         }
 
         .utility-links {
@@ -57,10 +72,34 @@
 
         section {
             padding: 2em;
+            text-align: center;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-top: 1em;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            animation: slideAnimation 60s infinite; /* 5초 * 3회 = 15초 */
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 70%;
+            height: auto;
         }
 
         footer {
-            background-color: #2c3e50;
+            background-color: rgb(254, 107, 30);
             color: white;
             text-align: center;
             padding: 1em 0;
@@ -68,13 +107,28 @@
             bottom: 0;
             width: 100%;
         }
+
+        @keyframes slideAnimation {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(-200%);
+            }
+            75% {
+                transform: translateX(-300%);
+            }
+            
+        }
     </style>
-    <title>반려견 교육 웹페이지</title>
+    <title>AWOOL</title>
 </head>
 <body>
-
     <header>
-        <h1 style="font-family: 'Pacifico', cursive;">반려견 교육</h1>
+        <h1 style="font-family: 'Pacifico', cursive;">AWOOL</h1>
         <div class="utility-links">
             <a href="#login">로그인</a>
             <a href="#signup">회원가입</a>
@@ -93,26 +147,52 @@
         <a href="#practice">실습</a>
     </nav>
 
-    <section id="home">
-        <h2>홈</h2>
-        <p>반려견 교육 홈 페이지에 오신 것을 환영합니다.</p>
+    <section>
+        <div class="slider-container">
+            <div class="slides">
+                <div class="slide">
+                    <a href="https://example.com">
+                        <img src="img/dog1.png" alt="Slide 1">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="https://example.com">
+                        <img src="img/dog2.png" alt="Slide 2">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="https://example.com">
+                        <img src="img/dog3.png" alt="Slide 3">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="https://example.com">
+                         <img src="img/dog4.png" alt="Slide 4">
+                     </a>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <section id="about-us">
-        <h2>우리에 대해</h2>
-        <p>
-            '내 반려견은 왜 이런 행동을 할까?'<br>
-            반려견의 문제 행동은 하루 아침에 생긴 것이 아닙니다.
-            그들은 꾸준한 신호로 우리에게 말을 걸었을 것입니다.
-            반려견이 보내는 신호를 읽고 그들의 마을을 이해하여 함께 행복하게 살 수 있도록 하는 것이 오울교육의 목표입니다.
-        </p>
+    <section >
+        <table>
+            <tr>
+                <td><img src="img/gsfdgdsagdsafdsafdsafdsa.png" alt="이미지 설명"></td>
+          
+            <td><p style="text-align:left">
+                <font size="7"> 내 반려견은 <strong>왜</strong> 이런 행동을 할까?</font><br><br>
+                 반려견의 문제행동은 하루아침에 생긴 것이 아닙니다.<br>
+                 그들은 꾸준한 신호로 우리에게 말을 걸었을 것입니다.<br>
+                 반려견이 보내는 신호를 읽고 그들의 마을을 이해하여<br>
+                 함께 행복하게 살 수 있도록 하는 것이 아울 교육의 목표입니다. <br>
+                  <a href="오울이란.html"><img src="img/오울교육 버튼.jpg" alt=""></a></p></td>
+               <td><img src="img/dkdkdkdjkd.png" alt=""></td> </tr>
+    </table>
     </section>
-
-    <!-- 나머지 섹션들 추가 -->
-
     <footer>
-        &copy; 2023 반려견 교육 웹페이지
+        &copy; AWOOL
     </footer>
 
+    <script>
+    </script>
 </body>
 </html>
