@@ -4,6 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+   .com22 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff; /* 초기 배경 색상 설정 */
+  }
+
+  .com22 a {
+    text-decoration: none;
+    padding: -10px; /* 상하 10px, 좌우 10px 여백 설정 */
+    flex: 1; /* 각 링크를 동일한 너비로 3등분하기 위해 flex 속성 추가 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    transition: background-color 0.3s;
+  }
+
+  .com22 a:hover {
+    color: black;
+    background-color: #e0e0e0; /* 마우스를 올렸을 때 배경 색상 변경 */
+  }
+        .company {
+            position: relative;
+        }
+        .company2 {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate( -50%, -50% );
+            color: rgb(0, 0, 0);
+            font-size: 40px;
+            font-weight: bold;
+        }
+   
+        
                 .image-overlay {
             position: relative;
         }
@@ -79,8 +111,7 @@
             position: relative;
             width: 100%;
             overflow: hidden;
-            padding: 0px;
-            /*margin-top: 1em;*/
+            margin-top: 1em;
         }
 
         .slides {
@@ -125,11 +156,11 @@
             
         }
     </style>
-    <title><a href="awool.html">AWOOL</a></title>
+    <title>AWOOL</title>
 </head>
 <body>
     <header>
-        <h1 style="font-family: 'Pacifico', cursive;">AWOOL</h1>
+        <div class="title"><h1 style="font-family: 'Pacifico', cursive;">AWOOL</h1></div>
         <div class="utility-links">
             <a href="#login">로그인</a>
             <a href="#signup">회원가입</a>
@@ -142,53 +173,54 @@
     <nav>
         <a href="awool.html">홈</a>
         <a href="오울이란.html">오울이란</a>
-        <a href="커리큘럼.html">교육과정</a>
+        <a href="커리큘럼.html">교육신청</a>
         <a href="커뮤니티.html">커뮤니티</a>
         <a href="내강의실.html">내 강의실</a>
         <a href="index1.html">실습</a>
     </nav>
 
+    <div class="company">
+        <img src="img/company.png" alt="" width="1920px" height="200px">
+    </div>
+    <div class="company2">
+        <p>회사소개</p>
+    </div>
+    <div>
+        <nav class="com22">
+            <a href="오울이란.html">회사소개</a>
+            <a href="교육소개.html">교육소개</a>
+            <a href="훈련사 소개.html">훈련사 소개</a>
+        </nav>
+    </div>
     <section>
-        <div class="slider-container">
-            <div class="slides">
-                <div class="slide">
-                    <a href="https://example.com">
-                        <img src="img/dog1.png" alt="Slide 1">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="https://example.com">
-                        <img src="img/dog2.png" alt="Slide 2">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="https://example.com">
-                        <img src="img/dog3.png" alt="Slide 3">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="https://example.com">
-                         <img src="img/dog4.png" alt="Slide 4">
-                     </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section >
-        <table>
-            <tr>
-                <td><img src="img/gsfdgdsagdsafdsafdsafdsa.png" alt="이미지 설명"></td>
-          
-            <td><p style="text-align:left">
-                <font size="7"> 내 반려견은 <strong>왜</strong> 이런 행동을 할까?</font><br><br>
-                 반려견의 문제행동은 하루아침에 생긴 것이 아닙니다.<br>
-                 그들은 꾸준한 신호로 우리에게 말을 걸었을 것입니다.<br>
-                 반려견이 보내는 신호를 읽고 그들의 마을을 이해하여<br>
-                 함께 행복하게 살 수 있도록 하는 것이 아울 교육의 목표입니다. <br>
-                  <a href="오울이란.html"><img src="img/오울교육 버튼.jpg" alt=""></a></p></td>
-               <td><img src="img/dkdkdkdjkd.png" alt=""></td> </tr>
-    </table>
-    </section>
+    <table>
+        <tr>
+            <td><img src="img/gsfdgdsagdsafdsafdsafdsa.png" alt="이미지 설명"></td>
+            <td><img src="img/gsfdgdsagdsafdsafdsafdsa.png" alt="이미지 설명"></td>
+            <td><img src="img/gsfdgdsagdsafdsafdsafdsa.png" alt="이미지 설명"></td>
+        </tr>
+        <tr>
+            <td>오세울 훈련사
+            <ul> 
+                <li>녹차</li>
+                <li>홍차</li>
+                <li>자스민차</li>
+            </ul></td>
+            <td>오울세 훈련사
+                <ul> 
+                <li>녹차</li>
+                <li>홍차</li>
+                <li>자스민차</li>
+            </ul></td>
+            <td>WoolSe Oh 훈련사
+                <ul> 
+                <li>녹차</li>
+                <li>홍차</li>
+                <li>자스민차</li>
+            </ul></td>
+        </tr>
+</table>
+</section>
     <footer>
         &copy; AWOOL
     </footer>
