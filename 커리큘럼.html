@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        footer {}
+        ul {
+  text-align: left;
+}
+        .table-container {
+        margin-left: 15%; /* 표를 원하는 위치로 옮김 */
+    } 
+                .image-overlay {
+            position: relative;
+        }
+
+        .overlay-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* 이미지 크기나 다른 스타일을 조절할 수 있습니다. */
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: rgb(255, 234, 200);
+            color: #333;
+        }
+        
+        section {
+            text-align: left;
+            padding: 2em;
+        }
+        header {
+            background-color: rgb(254, 107, 30);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        nav {
+            background-color: rgb(255, 255, 255);
+            padding: 1em 0;
+            text-align: center;
+            margin: 0; /* 추가 */
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 0 1em;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #866826;
+        }
+
+        .utility-links {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1em;
+            display: flex;
+            align-items: center;
+        }
+
+        .utility-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1em;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 0px;
+            /*margin-top: 1em;*/
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            animation: slideAnimation 60s infinite; /* 5초 * 3회 = 15초 */
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 70%;
+            height: auto;
+        }
+
+        footer {
+            background-color: rgb(254, 107, 30);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @keyframes slideAnimation {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(-200%);
+            }
+            75% {
+                transform: translateX(-300%);
+            }
+            
+        }
+    </style>
+    <title><a href="awool.html">AWOOL</a></title>
+</head>
+<body>
+    <header>
+        <h1 style="font-family: 'Pacifico', cursive;">AWOOL</h1>
+        <div class="utility-links">
+            <a href="로그인.html">로그인</a>
+            <a href="회원가입.html">회원가입</a>
+            <a href="고객센터.html">고객센터</a>
+            <a href="주문조회.html">주문조회</a>
+            <a href="장바구니.html">장바구니</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="awool.html">홈</a>
+        <a href="오울이란.html">오울이란</a>
+        <a href="커리큘럼.html">교육과정</a>
+        <a href="커뮤니티.html">커뮤니티</a>
+        <a href="내강의실.html">내 강의실</a>
+        <a href="index1.html">실습</a>
+    </nav>
+    <div class="company">
+        <img src="img/ed.png" alt="" width="1920px" height="200px">
+    </div>
+    <section class="ed">
+        <div class="table-container">
+        <table>
+            <tr>
+                <td><img src="img/ed1.png" alt="이미지 설명"></td>
+          
+            <td><p style="text-align:left">
+                <font size="6"><strong>무제한 365일 패키지</strong><br></font><br>
+                <ul>
+                    <li>총351강, 1년동안 무제한 시청</li>
+                    <li>퍼피 사회화, 카밍시그널, 불리불안, 산책 교육등 다양한<br>토픽의 교육 </li>
+                    <li>일 1,600원대로 배우는 오세울 훈련사님의 모든 노하우! </li>
+                </ul></p></td>
+                <td>
+                    <td><br><br><br><br><br>수강료 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp         <font size="5"><strong>590,000 원</strong></font><br>
+                    <a href="신청1.html"><img src="img/상세.png" alt=""></a><a href="결제.html"><img src="img/신청.png" alt=""></a>
+                    </td>
+            </tr>
+    </table>
+    <table>
+        <tr>
+            <td><img src="img/ed2.png" alt="이미지 설명"></td>
+        <td><p style="text-align:left">
+            <font size="6"><strong>무제한 180일 패키지</strong><br></font><br>
+            <ul>
+                    <li>총351강, 6개월동안 무제한 시청</li>
+                    <li>퍼피 사회화, 카밍시그널, 불리불안, 산책 교육등 다양한<br>토픽의 교육 </li>
+                    <li>일 2,700원대로 배우는 오세울 훈련사님의 모든 노하우! </li>
+                </ul></p></td>
+        <td>
+            <td><br><br><br><br><br>수강료 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp         <font size="5"><strong>490,000 원</strong></font><br>
+            <a href="신청2.html"><img src="img/상세.png" alt=""></a><a href="결제2.html"><img src="img/신청.png" alt=""></a>
+            </td>
+            
+        </tr>
+        <table>
+            <tr>
+            <td><img src="img/ed3.png" alt="이미지 설명"></td> 
+        <td><p style="text-align:left">
+            <font size="6"><strong>무제한 90일 패키지</strong><br></font><br>
+            <ul>
+                <li>총351강, 90년동안 무제한 시청</li>
+                <li>퍼피 사회화, 카밍시그널, 불리불안, 산책 교육등 다양한<br>토픽의 교육 </li>
+                <li>일 4,300원대로 배우는 오세울 훈련사님의 모든 노하우! </li>
+            </ul></p></td>
+            <td><br><br><br><br><br>수강료 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp         <font size="5"><strong>390,000 원</strong></font><br>
+                <a href="신청3.html"><img src="img/상세.png" alt=""></a><a href="결제3.html"><img src="img/신청.png" alt=""></a>
+                </td>
+        </tr>
+</table>    
+</table>
+</div>
+    </section>
+    <footer>
+        &copy; AWOOL
+    </footer>
+
+    <script>
+    </script>
+</body>
+</html>

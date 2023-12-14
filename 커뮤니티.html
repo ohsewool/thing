@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+          .com22 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff; /* 초기 배경 색상 설정 */
+  }
+
+  .com22 a {
+    text-decoration: none;
+    padding: -10px; /* 상하 10px, 좌우 10px 여백 설정 */
+    flex: 1; /* 각 링크를 동일한 너비로 3등분하기 위해 flex 속성 추가 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    transition: background-color 0.3s;
+  }
+
+  .com22 a:hover {
+    color: black;
+    background-color: #e0e0e0; /* 마우스를 올렸을 때 배경 색상 변경 */
+  }
+        footer {}
+        ul {
+  text-align: left;
+}
+        .table-container {
+        margin-left: 25%; /* 표를 원하는 위치로 옮김 */
+    } 
+                .image-overlay {
+            position: relative;
+        }
+
+        .overlay-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* 이미지 크기나 다른 스타일을 조절할 수 있습니다. */
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: rgb(255, 234, 200);
+            color: #333;
+        }
+        
+        section {
+            text-align: left;
+            padding: 2em;
+        }
+        header {
+            background-color: rgb(254, 107, 30);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        nav {
+            background-color: rgb(255, 255, 255);
+            padding: 1em 0;
+            text-align: center;
+            margin: 0; /* 추가 */
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 0 1em;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #866826;
+        }
+
+        .utility-links {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1em;
+            display: flex;
+            align-items: center;
+        }
+
+        .utility-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1em;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 0px;
+            /*margin-top: 1em;*/
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            animation: slideAnimation 60s infinite; /* 5초 * 3회 = 15초 */
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 70%;
+            height: auto;
+        }
+
+        footer {
+            background-color: rgb(254, 107, 30);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        table {
+            padding: 10px;
+}
+        @keyframes slideAnimation {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(-200%);
+            }
+            75% {
+                transform: translateX(-300%);
+            }
+            
+        }
+    </style>
+    <title><a href="awool.html">AWOOL</a></title>
+</head>
+<body>
+    <header>
+        <h1 style="font-family: 'Pacifico', cursive;">AWOOL</h1>
+        <div class="utility-links">
+            <a href="로그인.html">로그인</a>
+            <a href="회원가입.html">회원가입</a>
+            <a href="고객센터.html">고객센터</a>
+            <a href="주문조회.html">주문조회</a>
+            <a href="장바구니.html">장바구니</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="awool.html">홈</a>
+        <a href="오울이란.html">오울이란</a>
+        <a href="커리큘럼.html">교육과정</a>
+        <a href="커뮤니티.html">커뮤니티</a>
+        <a href="내강의실.html">내 강의실</a>
+        <a href="index1.html">실습</a>
+    </nav>
+    <div class="company">
+        <img src="img/com.png" alt="" width="1920px" height="200px">
+    </div>
+    <div>
+        <nav class="com22">
+            <a href="커뮤니티.html">오세울 칼럼</a>
+            <a href="교육후기.html">교육후기</a>
+        </nav>
+    <section class="ed">
+        <div class="table-container">
+        <table bgcolor="white">
+            <tr>
+                <th><a href="짖다.html"><img src="img/a1.png" alt="이미지 설명"></a><br>
+                <p style="text-align:left"> 집에서 반려견이 너무 짖어요!</p><br><hr>
+                <p style="text-align:left">조회수:6748</p></th>
+                
+        <th><a href="반려견.html"><img src="img/a2.png" alt="이미지 설명"></a><br>
+        <p style="text-align:left"> [생활/기타] 반려견 안전 관리 대책</p><br><hr>
+        <p style="text-align:left">조회수:10648</p></th>
+        <th><a href="말티즈.html"><img src="img/a3.png" alt="이미지 설명"></a><br>
+        <p style="text-align:left"> [생활/기타] 아울 견종 소개:말티즈</p><br><hr>
+        <p style="text-align:left">조회수:21848</p></th>
+    
+
+        <th><a href="가슴줄.html"><img src="img/a4.png" alt="이미지 설명"></a><br>
+        <p style="text-align:left"> [산책] 가슴줄과 3미터 리드줄을<br>사용해보시는 건 어떨까요?</p><hr>
+        <p style="text-align:left">조회수:6748</p></th>
+        </tr>
+</table>
+</div>
+    </section>
+    <footer>
+        &copy; AWOOL
+    </footer>
+
+    <script>
+    </script>
+</body>
+</html>

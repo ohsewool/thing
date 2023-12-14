@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        
                 .image-overlay {
             position: relative;
         }
@@ -110,28 +109,46 @@
             width: 100%;
         }
 
-        @keyframes slideAnimation {
-            0% {
-                transform: translateX(0);
-            }
-            25% {
-                transform: translateX(-100%);
-            }
-            50% {
-                transform: translateX(-200%);
-            }
-            75% {
-                transform: translateX(-300%);
-            }
-            
+        .payment-form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .payment-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .payment-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .payment-form button {
+            background-color: rgb(254, 107, 30);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .payment-form button:hover {
+            background-color: #866826;
         }
     </style>
-    <title>OWOOL</title>
+    <title><a href="awool.html">AWOOL</a></title>
 </head>
 <body>
-
     <header>
-        <body link="white" vlink="white" alink="white"></body><h1 style="font-family: 'Pacifico', cursive;"><a href="awool.html" style="text-decoration:none">OWOOL</h1></a></body>
+        <body link="white" vlink="white" alink="white"></body><h1 style="font-family: 'Pacifico', cursive;">
+            <a href="awool.html" style="text-decoration:none">OWOOL</h1></a></body>
         <div class="utility-links">
             <a href="로그인.html">로그인</a>
             <a href="회원가입.html">회원가입</a>
@@ -141,61 +158,37 @@
         </div>
     </header>
 
-    <nav>
-        <a href="awool.html">홈</a>
-        <a href="오울이란.html">오울이란</a>
-        <a href="커리큘럼.html">교육과정</a>
-        <a href="커뮤니티.html">커뮤니티</a>
-        <a href="내강의실.html">내 강의실</a>
-        <a href="index1.html">실습</a>
-    </nav>
+    <footer>
+        &copy; AWOOL
+    </footer>
 
-    <section>
-        <div class="slider-container">
-            <div class="slides">
-                <div class="slide">
-                    <a href="교육후기.html">
-                        <img src="img/dog1.png" alt="Slide 1">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="커뮤니티.html">
-                        <img src="img/dog2.png" alt="Slide 2">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="커리큘럼.html">
-                        <img src="img/dog3.png" alt="Slide 3">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="커리큘럼.html">
-                         <img src="img/dog4.png" alt="Slide 4">
-                     </a>
-                </div>
-            </div>
-        </div>
+   
+    <section class="payment-form">
+        <h2>결제 정보 입력</h2>
+        <form>
+            <label for="cardNumber">카드 번호</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234-5678-9012-3456" required>
+
+            <label for="expiryDate">유효 기간</label>
+            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" name="cvc" placeholder="123" required>
+
+            <button type="button" onclick="showPaymentResult()">결제</button>
+        </form>
     </section>
-    <section >
-        <table>
-            <tr>
-                <td><img src="img/gsfdgdsagdsafdsafdsafdsa.png" alt="이미지 설명"></td>
-          
-            <td><p style="text-align:left">
-                <font size="7"> 내 반려견은 <strong>왜</strong> 이런 행동을 할까?</font><br><br>
-                 반려견의 문제행동은 하루아침에 생긴 것이 아닙니다.<br>
-                 그들은 꾸준한 신호로 우리에게 말을 걸었을 것입니다.<br>
-                 반려견이 보내는 신호를 읽고 그들의 마을을 이해하여<br>
-                 함께 행복하게 살 수 있도록 하는 것이 아울 교육의 목표입니다. <br>
-                  <a href="오울이란.html"><img src="img/오울교육 버튼.jpg" alt=""></a></p></td>
-               <td><img src="img/dkdkdkdjkd.png" alt=""></td> </tr>
-    </table>
-    </section>
+
     <footer>
         &copy; AWOOL
     </footer>
 
     <script>
+        function showPaymentResult() {
+            // 결제 성공 팝업 메시지
+            alert("결제가 완료되었습니다.");
+            window.location.href = '결제완료.html';
+        }
     </script>
 </body>
 </html>
