@@ -3,73 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML5 문서 구조 시맨틱 태그 사용</title>
-    <link rel="stylesheet" href="./slide.css" />
-<style>
-    html, body{margin: 0; padding: 0; height: 100%;}
-    header{width: 100%; height: 15%;
-        background:white;}
-    section{width: 100%; height: 85%; 
-        background: rgb(255, 234, 200);}
-</style>
+    <style>
+        
+                .image-overlay {
+            position: relative;
+        }
+
+        .overlay-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* 이미지 크기나 다른 스타일을 조절할 수 있습니다. */
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: rgb(255, 234, 200);
+            color: #333;
+        }
+        
+        section {
+            text-align: left;
+            padding: 2em;
+        }
+        header {
+            background-color: rgb(254, 107, 30);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        nav {
+            background-color: rgb(255, 255, 255);
+            padding: 1em 0;
+            text-align: center;
+            margin: 0; /* 추가 */
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 0 1em;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #866826;
+        }
+
+        .utility-links {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1em;
+            display: flex;
+            align-items: center;
+        }
+
+        .utility-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1em;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 0px;
+            /*margin-top: 1em;*/
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            animation: slideAnimation 60s infinite; /* 5초 * 3회 = 15초 */
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 70%;
+            height: auto;
+        }
+
+        footer {
+            background-color: rgb(254, 107, 30);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @keyframes slideAnimation {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(-200%);
+            }
+            75% {
+                transform: translateX(-300%);
+            }
+            
+        }
+    </style>
+    <title>OWOOL</title>
 </head>
 <body>
-    <div class="slide slide_wrap">
-        <div class="slide_item item1">1</div>
-        <div class="slide_item item2">2</div>
-        <div class="slide_item item3">3</div>
-        <div class="slide_item item4">4</div>
-        <div class="slide_item item5">5</div>
-        <div class="slide_prev_button slide_button">◀</div>
-        <div class="slide_next_button slide_button">▶</div>
-        <ul class="slide_pagination"></ul>
-    </div>
-        <script src="./slide.js"></script>
+
     <header>
-    <table align="center">
-            <tr><td><a href="index.html"><img src="img/아울홈.jpg" alt=""></a></td>
-            </tr>
-    </table></header>
-    <table align="right">
-        <tr>
-            <td><a href="로그인.html"><img src="img/로그인 버튼.jpg" alt=""></a></td>
-            <td><a href="회원가입.html"><img src="img/회원가입 버튼.jpg" alt=""></a></td>
-            <td><a href="고객센터.html"><img src="img/고객센터 버튼.jpg" alt=""></a></td>
-            <td><a href="주문조회.html"><img src="img/주문조회 버튼.jpg" alt=""></a></td>
-            <td><a href="장바구니.html"><img src="img/장바구니 버튼.jpg" alt=""></a></td>
-        </tr>
+        <body link="white" vlink="white" alink="white"></body><h1 style="font-family: 'Pacifico', cursive;">
+            <a href="awool.html" style="text-decoration:none">OWOOL</h1></a></body>
+        <div class="utility-links">
+            <a href="로그인.html">로그인</a>
+            <a href="회원가입.html">회원가입</a>
+
+        </div>
+    </header>
+
+    <nav>
+        <a href="awool.html">홈</a>
+        <a href="오울이란.html">오울이란</a>
+        <a href="커리큘럼.html">교육과정</a>
+        <a href="커뮤니티.html">커뮤니티</a>
+        <a href="내강의실.html">내 강의실</a>
+        <a href="index1.html">실습</a>
+    </nav>
+
+    <section>
+        <div class="slider-container">
+            <div class="slides">
+                <div class="slide">
+                    <a href="교육후기.html">
+                        <img src="img/dog1.png" alt="Slide 1">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="커뮤니티.html">
+                        <img src="img/dog2.png" alt="Slide 2">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="커리큘럼.html">
+                        <img src="img/dog3.png" alt="Slide 3">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="커리큘럼.html">
+                         <img src="img/dog4.png" alt="Slide 4">
+                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section >
+        <table>
+            <tr>
+                <td><img src="img/gsfdgdsagdsafdsafdsafdsa.png" alt="이미지 설명"></td>
+          
+            <td><p style="text-align:left">
+                <font size="7"> 내 반려견은 <strong>왜</strong> 이런 행동을 할까?</font><br><br>
+                 반려견의 문제행동은 하루아침에 생긴 것이 아닙니다.<br>
+                 그들은 꾸준한 신호로 우리에게 말을 걸었을 것입니다.<br>
+                 반려견이 보내는 신호를 읽고 그들의 마을을 이해하여<br>
+                 함께 행복하게 살 수 있도록 하는 것이 아울 교육의 목표입니다. <br>
+                  <a href="오울이란.html"><img src="img/오울교육 버튼.jpg" alt=""></a></p></td>
+               <td><img src="img/dkdkdkdjkd.png" alt=""></td> </tr>
     </table>
-    <table width="1500" align="center">
-        <tr>
-            <td><a href="홈.html"><img src="img/home.jpg" alt=""></a></td>
-            <td><a href="오울이란.html"><img src="img/오울이란 버튼.jpg" alt=""></a></td>
-            <td><a href="커리큘럼.html"><img src="img/커리큘럼.jpg" alt=""></a></td>
-            <td><a href="커뮤니티.html"><img src="img/커뮤니티 버튼.jpg" alt=""></a></td>
-            <td><a href="내강의실.html"><img src="img/내 강의실 버튼.jpg" alt=""></a></td>
-            <td><a href="index1.html"><img src="img/실습.png" alt=""></a></td>
-        </tr>
-    </table>
-    
-    <section><table>
-        <tr>
-            <td><img src="img/dkdkdkdjkd.png" alt=""></td>
-            <td><h3>내 반려견은 왜 이런 행동을 할까? <br>
-                반려견의 문제 행동은 하루 아침에 생긴 것이 아닙니다. <br>
-                그들은 꾸준한 신호로 우리에게 말을 걸었을 것입니다. <br>
-                 반려견이 보내는 신호를 읽고 그들의 마을을 이해하여 함께 행복하게 살 수 있도록 하는 것이 오울교육의 목표입니다.</h3>
-            </td>
-        </tr>
-    </table>
-    <tr>
-        <td><h3>교육생 인터뷰<br>
-            매일 사납게 짖어<br>
-            일상 생활을 하기 힘들었어요<br>
-            이젠 산책도 다닐 수 있게 되었어요!<br>
-            오○울씨<br></h3>
-        </td>
-        <td><img src="img/gsfdgdsagdsafdsafdsafdsa.png" alt=""></td>   
-    </tr>
-</table>
-</section>
+    </section>
+    <footer>
+        &copy; OWOOL
+    </footer>
+
+    <script>
+    </script>
 </body>
 </html>
